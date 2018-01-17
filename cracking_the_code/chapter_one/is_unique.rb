@@ -7,8 +7,8 @@ module CrackingTheCode
       end 
       def is_unique?
        copy = @string.dup
-        copy = copy.chars.sort.join
-        copy.each_char.each_cons(2) do |char_one, char_two|
+        copy = copy.chars.sort
+        copy.each_cons(2) do |char_one, char_two|
         return false if char_one.eql?(char_two)
         end 
        return true
